@@ -1,5 +1,6 @@
 //////////////////////////////////////////
-// Peltier Control Software for Arduino - written foruse in Thermocyclers. By Felix Bonowski (2017)
+// Peltier Control Software for Arduino - written for use in Thermocyclers. By Felix Bonowski @ Bauhaus Weimar (2017)
+//
 // !Use only under constant supervision - your device _WILL_ cause a fire if it malfunctions!
 //
 // Compatiple Sensors and Drivers:
@@ -83,7 +84,7 @@ void loop() {
     controller.disable();
   }
   //check if the whole thing gets too hot and prevent it from catching fire:
-  if(currentTemp >100||currentTemp <20){
+  if(currentTemp >100||currentTemp <-20){
     Serial.println("Overheated - shutting down to prevent fire! (check polarity of peltier and driver\n");
     controller.disable();
   }
