@@ -2,6 +2,11 @@
 # Thermocycler Software for usage with an Arduino based Peltier Control. By Felix Bonowski (2017)
 # !Use only under constant supervision - your device _WILL_ cause a fire if it malfunctions!
 #
+# Works onyl with Python 3.x!
+# -> type "python3 ThermocyclerController.py" in command line to run
+#
+# Depends on pyserial library
+#  -> type "pip3 install pyserial" to install
 #
 # Uses the following Serial commands:
 # - set temperature to ###.### (enables peltier):  "t###.###\n"
@@ -17,7 +22,7 @@ import time
 
 ###!!!Choose the same Port as you would in the Arduino IDE here!!!
 # arduinoport = '/dev/cu.usbmodem621'
-arduinoport = 'COM4'
+arduinoport = 'COM5'
 pcrSerial = serial.Serial(arduinoport, 115200)
 
 
