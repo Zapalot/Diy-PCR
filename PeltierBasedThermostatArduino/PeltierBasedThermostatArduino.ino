@@ -3,6 +3,8 @@
 //
 // !Use only under constant supervision - your device _WILL_ cause a fire if it malfunctions!
 //
+// Needs OneWire (By Paul Stoffregen) and  "DallasTemperature" DS18B20 Libraries By (Miles Burton) (Download via Skech > Import library > Contributed)
+// 
 // Compatiple Sensors and Drivers:
 // - Dallas DS18B20 Temperature Sensor (could be replaced by any other type. Good thermal coupling to via-holder is important!)
 // - VNH3SP30 Motor Driver for Peltier control (cheap and high current, place in airflow of the peltier-fan if it overheats)
@@ -18,8 +20,8 @@
 /////////////////////////////////////////////////////////////////////////
 
 // Infos about the temp. sensor can be found here:https://www.milesburton.com/Dallas_Temperature_Control_Library
-#include "OneWire.h"
-#include "DallasTemperature.h"
+#include "OneWire_.h"
+#include "DallasTemperature_.h"
 
 #define MIN_TEMP 0
 #define MAX_TEMP 95
